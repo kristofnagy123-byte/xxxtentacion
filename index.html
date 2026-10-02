@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XXXTENTACION</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;color:white}
+body{font-family:Georgia,serif;cursor:pointer}
+.page{
+height:100vh;width:100%;display:flex;align-items:center;justify-content:center;
+text-align:center;position:relative;overflow:hidden;
+}
+.stars{
+position:absolute;inset:0;
+background:
+radial-gradient(2px 2px at 8% 18%,white,transparent),
+radial-gradient(2px 2px at 21% 63%,white,transparent),
+radial-gradient(2px 2px at 37% 29%,white,transparent),
+radial-gradient(2px 2px at 52% 72%,white,transparent),
+radial-gradient(2px 2px at 69% 41%,white,transparent),
+radial-gradient(2px 2px at 83% 16%,white,transparent),
+radial-gradient(2px 2px at 92% 78%,white,transparent),
+radial-gradient(2px 2px at 58% 12%,white,transparent);
+opacity:.9
+}
+.content{position:relative;z-index:2;padding:25px}
+h1{font-size:clamp(42px,10vw,90px);margin:0 0 25px}
+.quote{font-size:24px;font-style:italic}
+.hint{margin-top:60px;opacity:.5;font-size:13px;letter-spacing:3px}
+#p2,#p3{display:none}
+.card{
+padding:40px 25px;border:1px solid #444;border-radius:25px;
+background:#111;width:min(90%,420px)
+}
+.avatar{
+width:120px;height:120px;border:2px solid white;border-radius:50%;
+margin:auto;display:flex;align-items:center;justify-content:center;
+font-size:50px
+}
+.name{font-size:38px;margin:20px 0 5px}
+a{color:white;text-decoration:none;border:1px solid #555;
+padding:12px 20px;border-radius:12px;display:inline-block;margin:6px}
+</style>
+</head>
+<body onclick="next()">
+
+<div id="p1" class="page">
+<div class="stars"></div>
+<div class="content">
+<h1>XXXTENTACION</h1>
+<div class="quote">“I gave you the best of me.”</div>
+<div class="hint">TAP TO CONTINUE</div>
+</div>
+</div>
+
+<div id="p2" class="page">
+<div class="stars"></div>
+<div class="content">
+<div class="quote">TAKE THE RISK OR LOSE THE CHANCE</div>
+<div class="hint">TAP TO CONTINUE</div>
+</div>
+</div>
+
+<div id="p3" class="page">
+<div class="card">
+<div class="avatar">X</div>
+<div class="name">XXXTENTACION</div>
+<div>LEGENDS NEVER DIE</div>
+<br>
+<a href="https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4" onclick="event.stopPropagation()">Spotify</a>
+<a href="https://www.youtube.com/@xxxtentacion" onclick="event.stopPropagation()">YouTube</a>
+</div>
+</div>
+
+<script>
+let page=1;
+function next(){
+if(page===1){
+p1.style.display="none";p2.style.display="flex";page=2
+}else if(page===2){
+p2.style.display="none";p3.style.display="flex";page=3
+}
+}
+</script>
+</body>
+</html>
